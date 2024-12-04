@@ -43,7 +43,50 @@
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pWljl5eJkpo?si=Dz0d324iWvpl36RR" title="YouTube video player" width="560"></iframe></p><h3>w11_hw</h3>
 <p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323211/d1d49b2ef71d8bd9fe9751936390ad9d/raw/97d7b63259e67077aa690476d82f9cca744a6da8/w11%2520%25E7%25AE%2597%25E8%25A1%258C%25E6%2595%25B8">算行數</a></p>
 <p>n = 11 # 總共的行數<br/>space = '_'<br/>center = n//2<br/>#print(center)</p>
-<p>for y in range(n):<br/> for x in range(n):<br/> print("(", x, ", ", y, ")", sep="")</p><h2>HW 1 Exam</h2><h3>w7</h3>
+<p>for y in range(n):<br/> for x in range(n):<br/> print("(", x, ", ", y, ")", sep="")</p>
+<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323211/d1d49b2ef71d8bd9fe9751936390ad9d/raw/4fffc0acd992d51cb9ab4be0aa85eb08547de5dc/w12%2520%25E7%2594%25A8%25E7%25AD%2586%25E7%2595%25AB%25E6%25AD%25A3%25E6%2596%25B9%25E6%25A0%25BC%25E5%25AD%2590">用筆畫方格子</a></p>
+<pre>from browser import html
+
+from browser import document as doc
+ 
+# 利用 html 建立 canvas 超文件物件
+
+canvas = html.CANVAS(width=400, height=400)
+
+brython_div = doc["brython_div1"]
+
+brython_div &lt;= canvas
+ 
+#每一個的pixcel數
+
+gs = 20
+ 
+#gs"tc = canvas width and height
+ 
+ctx = canvas.getContext("2d")
+
+width = 11
+
+height = 11
+ 
+ 
+for i in range(width):
+
+     for j in range(height):
+
+         #dRect(i*gs,j*gs,gs,gs,1,"red"
+
+          ctx.lineWidth = 1
+
+          ctx.strokeStyle = 'red'
+
+          ctx.beginPath();
+
+          ctx.rect(i*gs,j*gs,gs,gs)
+
+          ctx.stroke();
+ </pre><h3>w13_hw</h3>
+<h2>HW 1 Exam</h2><h3>w7</h3>
 <p>1.在作業網站叫出Brython</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RS-zLOk9JWc?si=oPWS32WYVzAy5xe3" title="YouTube video player" width="560"></iframe></p>
 <p></p>
