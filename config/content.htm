@@ -220,8 +220,99 @@ for i in range(width):
 <p># 填充顏色<br/> ctx.fillStyle = current_color<br/> ctx.fillRect(px, py, 1, 1) # 填充一個像素</p>
 <p># 直接設定三個圓心和半徑<br/>x1, y1, r1 = 150, 200, 100 # 圓1：圓心 (150, 200)，半徑 100<br/>x2, y2, r2 = 250, 200, 100 # 圓2：圓心 (250, 200)，半徑 100<br/>x3, y3, r3 = 200, 100, 100 # 圓3：圓心 (200, 100)，半徑 100</p>
 <p># 呼叫畫圓函式<br/>draw_circles(x1, y1, r1, x2, y2, r2, x3, y3, r3)</p>
-<p></p><h2>HW 1 Exam</h2>
-<h3>w7</h3>
+<p></p><h3><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323211/83b8ffb41b07644bf64698192bad99da/raw/5ecad9e8f597a1cd383aa3d4e173efbf6315146f/w16_exam1">w16_exam1</a></h3>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+import math
+ 
+# 初始化 HTML，確保 canvas 元素存在
+def setup_canvas():
+    if not document.querySelector("#my_canvas"):
+        canvas = html.CANVAS(id="my_canvas", width=800, height=600)
+        document &lt;= canvas
+ 
+setup_canvas()
+
+# Set up canvas
+canvas = document["my_canvas"]
+ctx = canvas.getContext("2d")
+
+# Set origin (32, 11)
+origin_x, origin_y = 32, 11    #自己學號 修改
+
+# Draw X-axis
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(500, origin_y)
+ctx.strokeStyle = "black"
+ctx.lineWidth = 2
+ctx.stroke()
+
+# Draw Y-axis
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(origin_x, 300)
+ctx.stroke()
+
+# Label origin
+ctx.font = "12px Arial"
+ctx.fillStyle = "black"
+ctx.fillText("(32, 11)", origin_x + 5, origin_y - 5)
+
+# Draw shapes
+# Adjusted placement to fix alignment issue
+
+# Hexagon (Orange)
+hex_x, hex_y = 100, 100
+ctx.beginPath()
+for i in range(6):
+    angle = i * (2 * math.pi / 6)
+    x = hex_x + 30 * math.cos(angle)
+    y = hex_y + 30 * math.sin(angle)
+    if i == 0:
+        ctx.moveTo(x, y)
+    else:
+        ctx.lineTo(x, y)
+ctx.closePath()
+ctx.fillStyle = "orange"
+ctx.fill()
+
+# Diamond (Teal)
+ctx.beginPath()
+ctx.moveTo(160, 70)
+ctx.lineTo(180, 100)
+ctx.lineTo(160, 130)
+ctx.lineTo(140, 100)
+ctx.closePath()
+ctx.fillStyle = "teal"
+ctx.fill()
+
+# Triangle (Teal)
+ctx.beginPath()
+ctx.moveTo(165, 130)
+ctx.lineTo(205, 130)
+ctx.lineTo(185, 100)
+ctx.closePath()
+ctx.fillStyle = "blue"
+ctx.fill()
+
+# Circle (Pink)
+ctx.beginPath()
+ctx.arc(230, 100, 30, 0, 2 * math.pi)
+ctx.fillStyle = "pink"
+ctx.fill()
+
+# Square (Yellow)
+ctx.beginPath()
+ctx.rect(265, 75, 50, 50)
+ctx.fillStyle = "yellow"
+ctx.fill()
+
+# Rectangle (Blue)
+ctx.beginPath()
+ctx.rect(320, 90, 60, 20)
+ctx.fillStyle = "Blue"
+ctx.fill()</pre>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/uI1QwRdar5E?si=I5hG8C-qlXvBEsoV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p><h2>HW 1 Exam</h2><h3>w7</h3>
 <p>1.在作業網站叫出Brython</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RS-zLOk9JWc?si=oPWS32WYVzAy5xe3" title="YouTube video player" width="560"></iframe></p>
 <p></p>
