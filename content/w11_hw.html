@@ -2,6 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -140,22 +141,53 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Attendance.html'>Next</a> >> Attendance<br /><h1>About</h1>
-<p>國立虎尾科技大學機械設計工程系</p>
-<p>National Formosa University</p>
-<p>Department of Mechanical Design Engineering</p>
-<p>cp2024 計算機程式</p>
-<p>課程教材:</p>
-<p style="padding-left: 30px;"><a href="https://blog.jupyter.org/introducing-learn-python-with-jupyter-11214f152159">Learn Python with Jupyter</a> (<a href="https://www.learnpythonwithjupyter.com/">site</a>, <a href="https://localhost:9445/downloads/learn_python_with_jupyter.pdf">ebook</a>)</p>
-<p style="padding-left: 30px;">教育版帳號 microsoftonline 登入點: <a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a></p>
-<p>Teams 線上教學:</p>
-<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入 <a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a> Office 365 </p>
-<p style="padding-left: 30px;">Teams 團隊代碼: fqpabi8</p>
-<p>個人倉儲:<a href="https://github.com/mdecp2024/hw-41323211">https://github.com/mdecp2024/hw-41323211</a></p>
-<p>個人網站:<a class="Link--inTextBlock" href="https://mdecp2024.github.io/hw-41323211/">https://mdecp2024.github.io/hw-41323211</a></p>
-<p>其他資訊:</p>
-<p style="padding-left: 30px;"><a href="./../downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
-<p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p><br /> <a href='Attendance.html'>Next</a> >> Attendance</div>
+    <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <a href='w13_hw.html'>Next</a> >> w13_hw<br /><h1>w11_hw</h1>
+<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323211/d1d49b2ef71d8bd9fe9751936390ad9d/raw/97d7b63259e67077aa690476d82f9cca744a6da8/w11%2520%25E7%25AE%2597%25E8%25A1%258C%25E6%2595%25B8">算行數</a></p>
+<p>n = 11 # 總共的行數<br/>space = '_'<br/>center = n//2<br/>#print(center)</p>
+<p>for y in range(n):<br/> for x in range(n):<br/> print("(", x, ", ", y, ")", sep="")</p>
+<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323211/d1d49b2ef71d8bd9fe9751936390ad9d/raw/4fffc0acd992d51cb9ab4be0aa85eb08547de5dc/w12%2520%25E7%2594%25A8%25E7%25AD%2586%25E7%2595%25AB%25E6%25AD%25A3%25E6%2596%25B9%25E6%25A0%25BC%25E5%25AD%2590">用筆畫方格子</a></p>
+<pre>from browser import html
+
+from browser import document as doc
+ 
+# 利用 html 建立 canvas 超文件物件
+
+canvas = html.CANVAS(width=400, height=400)
+
+brython_div = doc["brython_div1"]
+
+brython_div &lt;= canvas
+ 
+#每一個的pixcel數
+
+gs = 20
+ 
+#gs"tc = canvas width and height
+ 
+ctx = canvas.getContext("2d")
+
+width = 11
+
+height = 11
+ 
+ 
+for i in range(width):
+
+     for j in range(height):
+
+         #dRect(i*gs,j*gs,gs,gs,1,"red"
+
+          ctx.lineWidth = 1
+
+          ctx.strokeStyle = 'red'
+
+          ctx.beginPath();
+
+          ctx.rect(i*gs,j*gs,gs,gs)
+
+          ctx.stroke();
+ </pre>
+<br />w10 << <a href='w10.html'>Previous</a> <a href='w13_hw.html'>Next</a> >> w13_hw</div>
         
     <!-- footer -->
       <div class="container">
